@@ -3,7 +3,11 @@ package asst.unicauca.edu.co.parcialparteii.dominio.casosDeUso;
 import asst.unicauca.edu.co.parcialparteii.aplicacion.input.GestionarRespuestaCuestionarioCUIntPort;
 import asst.unicauca.edu.co.parcialparteii.aplicacion.output.GestionarRespuestaCuestionarioGatewayIntPort;
 import asst.unicauca.edu.co.parcialparteii.aplicacion.output.RespuestaFormateadorResultadosIntPort;
+import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Cuestionario;
+import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Docente;
 import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Respuesta;
+
+import java.util.List;
 
 public class GestionarRespuestaCuestionarioCUAdapter implements GestionarRespuestaCuestionarioCUIntPort{
 
@@ -30,7 +34,12 @@ public class GestionarRespuestaCuestionarioCUAdapter implements GestionarRespues
     }
 
     @Override
-    public Respuesta verificarRespuesta(Respuesta respuesta) {
-        return null;
+    public List<Respuesta> verificarRespuesta(Docente docente, Cuestionario cuestionario) {
+        List<Respuesta> respuestas=null;
+        if(this.objGestionarRespuestaCuestionarioGateway.verificarDocenteCuestionario(docente,cuestionario)){
+            this.objRespuestaFormateadorResultados.retornarRespuestaErrorReglaDeNegocio("Error, el docente no ha respondido el cuestionario");
+        }
+        respuestas=docente.getRespuestaEntities();
+        return respuestas;
     }
 }
