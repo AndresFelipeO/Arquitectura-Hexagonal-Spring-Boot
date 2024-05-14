@@ -31,6 +31,6 @@ public class PreguntaEntity {
     @JoinColumn(name="idCuestionario", nullable=false)
     private CuestionarioEntity objCuestionarioEntity;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "objPregunta")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "objPreguntaEntity")
     private List<RespuestaEntity> respuestaEntities;
 }

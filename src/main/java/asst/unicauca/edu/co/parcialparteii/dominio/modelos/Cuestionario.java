@@ -3,6 +3,7 @@ package asst.unicauca.edu.co.parcialparteii.dominio.modelos;
 import lombok.*;
 import java.util.List;
 
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

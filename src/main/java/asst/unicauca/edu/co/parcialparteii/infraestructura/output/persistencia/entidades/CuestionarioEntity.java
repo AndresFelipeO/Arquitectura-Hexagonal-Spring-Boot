@@ -26,6 +26,6 @@ public class CuestionarioEntity {
     @Column(name = "descripcion",length = 30)
     private String descripcion;
 
-    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.REMOVE},fetch = FetchType.EAGER, mappedBy = "objCuestionario")
+    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.REMOVE},fetch = FetchType.EAGER, mappedBy = "objCuestionarioEntity")
     private List<PreguntaEntity> preguntaEntities;
 }

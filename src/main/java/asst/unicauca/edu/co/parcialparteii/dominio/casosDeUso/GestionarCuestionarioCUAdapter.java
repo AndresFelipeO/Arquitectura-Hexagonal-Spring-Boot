@@ -8,6 +8,7 @@ import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Cuestionario;
 import java.util.List;
 
 public class GestionarCuestionarioCUAdapter implements GestionarCuestionarioCUIntPort {
+
     private final GestionarCuestionarioGatewayIntPort objGestionarCuestionarioGateway;
     private final RespuestaFormateadorResultadosIntPort objRespuestaFormateadorResultados;
 

@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface GestionarRespuestaCuestionarioGatewayIntPort {
     public boolean existeRespuestaCuestionario(int codigo);
-    public boolean cuestionarioYaRespondido(Respuesta respuesta);
     public Respuesta guardar(Respuesta respuesta);
     public boolean verificarDocenteCuestionario(Docente docente, Cuestionario cuestionario);
 }

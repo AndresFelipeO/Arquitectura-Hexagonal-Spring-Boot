@@ -7,6 +7,6 @@ import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Respuesta;
 import java.util.List;
 
 public interface GestionarRespuestaCuestionarioCUIntPort {
-    public Respuesta crear(Respuesta respuesta);
-    public List<Respuesta> verificarRespuesta(Docente docente, Cuestionario cuestionario);
+    public Respuesta crear(Docente docente, Cuestionario cuestionario,Respuesta respuesta);
+    public List<Respuesta> listar(Docente docente);
 }

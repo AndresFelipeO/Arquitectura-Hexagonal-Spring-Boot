@@ -5,7 +5,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class RespuestaMapper {
+public class Mapper {
     @Bean
-    public ModelMapper CrearRespuestaMapper() {return new ModelMapper();}
+    public ModelMapper crearMapper(){
+        return new ModelMapper();
+    }
 }

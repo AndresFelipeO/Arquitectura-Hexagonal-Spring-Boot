@@ -20,12 +20,12 @@ public class GestionarRespuestaCuestionarioCUAdapter implements GestionarRespues
     }
 
     @Override
-    public Respuesta crear(Respuesta respuesta) {
+    public Respuesta crear(Docente docente, Cuestionario cuestionario,Respuesta respuesta) {
         Respuesta respuestaCreada=null;
         if(this.objGestionarRespuestaCuestionarioGateway.existeRespuestaCuestionario(respuesta.getIdRespuesta())){
             this.objRespuestaFormateadorResultados.retornarRespuestaErrorEntidadExiste("Error, existe id de respuesta");
         }else {
-            if(this.objGestionarRespuestaCuestionarioGateway.cuestionarioYaRespondido(respuesta)){
+            if(this.objGestionarRespuestaCuestionarioGateway.verificarDocenteCuestionario(docente,cuestionario)){
                 this.objRespuestaFormateadorResultados.retornarRespuestaErrorReglaDeNegocio("Error, El docente ya respondio el cuestionario");
             }
             respuestaCreada=this.objGestionarRespuestaCuestionarioGateway.guardar(respuesta);
@@ -34,11 +34,8 @@ public class GestionarRespuestaCuestionarioCUAdapter implements GestionarRespues
     }
 
     @Override
-    public List<Respuesta> verificarRespuesta(Docente docente, Cuestionario cuestionario) {
+    public List<Respuesta> listar(Docente docente) {
         List<Respuesta> respuestas=null;
-        if(this.objGestionarRespuestaCuestionarioGateway.verificarDocenteCuestionario(docente,cuestionario)){
-            this.objRespuestaFormateadorResultados.retornarRespuestaErrorReglaDeNegocio("Error, el docente no ha respondido el cuestionario");
-        }
         respuestas=docente.getRespuestaEntities();
         return respuestas;
     }
