@@ -23,8 +23,8 @@ public class PreguntaDTOPeticion {
     @Size(min = 3, max = 400, message = "{pregunta.enunciado.size}")
     private String enunciado;
 
-    List<RespuestaDTOPeticion> respuesta;
+    List<RespuestaDTOPeticion> respuestaEntities;
 
     @Valid
-    private TipoPreguntaDTOPeticion objTipoPregunta;
+    private TipoPreguntaDTOPeticion objTipoPreguntaEntity;
 }

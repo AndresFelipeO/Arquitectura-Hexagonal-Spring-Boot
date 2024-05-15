@@ -11,7 +11,7 @@ import java.util.List;
 public class Pregunta {
     private int idpregunta;
     private String enunciado;
-    private TipoPregunta objTipoPregunta;
+    private TipoPregunta objTipoPreguntaEntity;
     private Cuestionario objCuestionario;
     private List<Respuesta> respuestaEntities;
 }

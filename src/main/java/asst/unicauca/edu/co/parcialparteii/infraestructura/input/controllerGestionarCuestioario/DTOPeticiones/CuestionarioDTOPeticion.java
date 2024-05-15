@@ -28,6 +28,6 @@ public class CuestionarioDTOPeticion {
     private String descripcion;
 
     @Valid
-    List<PreguntaDTOPeticion> pregunta;
+    List<PreguntaDTOPeticion> preguntaEntities;
 
 }

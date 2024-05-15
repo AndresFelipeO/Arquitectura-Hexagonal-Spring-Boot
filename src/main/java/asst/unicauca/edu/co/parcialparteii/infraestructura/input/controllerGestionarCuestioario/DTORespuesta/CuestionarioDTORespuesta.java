@@ -15,7 +15,7 @@ public class CuestionarioDTORespuesta {
     private int idCuestionario;
     private String titulo;
     private String descripcion;
-    private List<Pregunta> preguntaEntities;
+    private List<PreguntaDTORespuesta> preguntaEntities;
 
     public CuestionarioDTORespuesta(){}
 }
