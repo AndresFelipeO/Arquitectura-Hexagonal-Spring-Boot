@@ -10,5 +10,5 @@ public class Respuesta {
     private int idRespuesta;
     private String descripcion;
     private Docente objUsuario;
-    private Pregunta objPregunta;
+    private Pregunta objPreguntaEntity;
 }

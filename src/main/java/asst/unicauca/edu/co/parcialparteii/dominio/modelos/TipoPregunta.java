@@ -13,5 +13,5 @@ public class TipoPregunta {
     private  int idtipPregunta;
     private String nombre;
     private String  descripcion;
-    private List<Pregunta> pregunta;
+    private List<Pregunta> preguntaEntity;
 }

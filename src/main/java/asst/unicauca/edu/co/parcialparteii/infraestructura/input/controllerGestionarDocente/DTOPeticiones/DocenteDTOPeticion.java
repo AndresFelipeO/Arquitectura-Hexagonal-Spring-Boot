@@ -19,11 +19,11 @@ public class DocenteDTOPeticion {
 
     @NotNull(message = "{docente.tipoidentificacion.emply}")
     @Size(min = 5, max = 45, message = "{docente.tipoidentificacion.size}")
-    private String tipoidentificacion;
+    private String tipoIdentificacion;
 
     @NotNull(message = "{docente.numeroidentificacion.emply}")
     @Size(min = 1, max = 10, message = "{docente.numeroidentificacion.size}")
-    private String numeroidentificacion;
+    private String numeroIdentificacion;
 
     @NotNull(message = "{docente.nombres.emply}")
     @Size(min = 3, max = 20, message = "{docente.nombres.size}")
@@ -42,12 +42,8 @@ public class DocenteDTOPeticion {
     private String vinculacion;
 
     @Valid
-    private TelefonoDTOPeticion objTelefono;
+    private TelefonoDTOPeticion objTelefonoEntity;
 
-    @Valid
-    private List<RespuestaDTOPeticion> respuestas;
-
-    @Valid
-    private List<DepartamentoDTOPeticion> listaDepartamentos;
+    private List<DepartamentoDTOPeticion> departamentoEntities;
 
 }

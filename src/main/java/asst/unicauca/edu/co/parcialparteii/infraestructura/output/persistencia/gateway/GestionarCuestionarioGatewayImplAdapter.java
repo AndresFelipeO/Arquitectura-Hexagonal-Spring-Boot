@@ -48,10 +48,8 @@ public class GestionarCuestionarioGatewayImplAdapter implements GestionarCuestio
 
     @Override
     public Cuestionario guardar(Cuestionario cuestionario) {
-        
         CuestionarioEntity objCuestionarioaEntity=this.cuestionarioModelMapper.map(cuestionario, CuestionarioEntity.class);
         List<PreguntaEntity> lista=new ArrayList<>();
-
         for(PreguntaEntity preguntas:objCuestionarioaEntity.getPreguntaEntities()){
             Optional<TipoPreguntaEntity> tipoPregunta=tipoPreguntaRepository.findById(preguntas.getObjTipoPreguntaEntity().getIdtipPregunta());
             preguntas.setObjTipoPreguntaEntity(tipoPregunta.get());
