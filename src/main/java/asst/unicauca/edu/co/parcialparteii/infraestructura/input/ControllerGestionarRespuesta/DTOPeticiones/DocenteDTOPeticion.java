@@ -9,8 +9,8 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @AllArgsConstructor
-public class RespuestaDTOPeticion {
-    @NotNull(message = "{respuesta.descricion.emply}")
-    private String descripcion;
-    public RespuestaDTOPeticion(){}
+public class DocenteDTOPeticion {
+    @NotNull(message = "{docente.iddocente.emply}")
+    private int idpersona;
+    public DocenteDTOPeticion(){};
 }

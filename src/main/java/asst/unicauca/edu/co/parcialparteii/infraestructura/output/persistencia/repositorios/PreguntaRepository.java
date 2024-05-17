@@ -4,4 +4,5 @@ import asst.unicauca.edu.co.parcialparteii.infraestructura.output.persistencia.e
 import org.springframework.data.repository.CrudRepository;
 
 public interface PreguntaRepository extends CrudRepository<PreguntaEntity, Integer> {
+
 }

@@ -12,4 +12,5 @@ public interface DocenteMapperInfraestructuraDominio {
     Docente mappearDePeticionADocente(DocenteDTOPeticion peticion);
     DocenteDTORespuesta mappearDeDocenteARespuesta(Docente objDocente);
     List<DocenteDTORespuesta> mappearDeDocenteARespuesta(List<Docente> docentes);
+
 }

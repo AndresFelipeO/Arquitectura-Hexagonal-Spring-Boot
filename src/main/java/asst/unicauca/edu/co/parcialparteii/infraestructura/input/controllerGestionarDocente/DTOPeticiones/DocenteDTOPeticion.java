@@ -45,5 +45,4 @@ public class DocenteDTOPeticion {
     private TelefonoDTOPeticion objTelefonoEntity;
 
     private List<DepartamentoDTOPeticion> departamentoEntities;
-
 }
