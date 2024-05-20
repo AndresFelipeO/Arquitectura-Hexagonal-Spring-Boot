@@ -7,7 +7,6 @@ import asst.unicauca.edu.co.parcialparteii.infraestructura.output.persistencia.e
 import asst.unicauca.edu.co.parcialparteii.infraestructura.output.persistencia.entidades.TelefonoEntity;
 import asst.unicauca.edu.co.parcialparteii.infraestructura.output.persistencia.repositorios.DepartamentoRepository;
 import asst.unicauca.edu.co.parcialparteii.infraestructura.output.persistencia.repositorios.DocenteRepository;
-import asst.unicauca.edu.co.parcialparteii.infraestructura.output.persistencia.repositorios.TelefonoRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,16 +18,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class GestionarDocenteGatewayImplAdapter implements GestionarDocenteGatewayIntPort {
     private final DocenteRepository docenteRepository;
-    private final TelefonoRepository telefonoRepository;
     private final DepartamentoRepository departamentoRepository;
     private final ModelMapper docenteModelMapper;
 
     public GestionarDocenteGatewayImplAdapter(DocenteRepository docenteRepository,
-                                              TelefonoRepository telefonoRepository,
                                               DepartamentoRepository departamentoRepository,
                                               ModelMapper docenteModelMapper) {
         this.docenteRepository = docenteRepository;
-        this.telefonoRepository = telefonoRepository;
         this.departamentoRepository = departamentoRepository;
         this.docenteModelMapper = docenteModelMapper;
     }

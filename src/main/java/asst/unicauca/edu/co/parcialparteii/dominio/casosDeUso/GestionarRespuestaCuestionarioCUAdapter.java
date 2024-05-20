@@ -6,11 +6,6 @@ import asst.unicauca.edu.co.parcialparteii.aplicacion.output.RespuestaFormateado
 import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Cuestionario;
 import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Docente;
 import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Pregunta;
-import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Respuesta;
-import asst.unicauca.edu.co.parcialparteii.infraestructura.output.persistencia.entidades.PreguntaEntity;
-
-import java.util.List;
-import java.util.function.Predicate;
 
 public class GestionarRespuestaCuestionarioCUAdapter implements GestionarRespuestaCuestionarioCUIntPort{
 

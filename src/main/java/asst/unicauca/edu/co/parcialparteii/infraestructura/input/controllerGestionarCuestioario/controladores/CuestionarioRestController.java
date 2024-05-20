@@ -3,7 +3,6 @@ package asst.unicauca.edu.co.parcialparteii.infraestructura.input.controllerGest
 
 import asst.unicauca.edu.co.parcialparteii.aplicacion.input.GestionarCuestionarioCUIntPort;
 import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Cuestionario;
-import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Pregunta;
 import asst.unicauca.edu.co.parcialparteii.infraestructura.input.controllerGestionarCuestioario.DTOPeticiones.CuestionarioDTOPeticion;
 import asst.unicauca.edu.co.parcialparteii.infraestructura.input.controllerGestionarCuestioario.DTORespuesta.CuestionarioDTORespuesta;
 import asst.unicauca.edu.co.parcialparteii.infraestructura.input.controllerGestionarCuestioario.mappers.CuestionarioMapperInfraestructuraDominio;

@@ -1,10 +1,8 @@
 package asst.unicauca.edu.co.parcialparteii.infraestructura.input.ControllerGestionarRespuesta.DTORespuesta;
 
-import asst.unicauca.edu.co.parcialparteii.infraestructura.output.persistencia.entidades.RespuestaEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.List;
 
 @Getter

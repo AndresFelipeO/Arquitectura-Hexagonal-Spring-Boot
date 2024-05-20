@@ -1,6 +1,5 @@
 package asst.unicauca.edu.co.parcialparteii.infraestructura.input.controllerGestionarDocente.DTOPeticiones;
 
-import asst.unicauca.edu.co.parcialparteii.infraestructura.input.ControllerGestionarRespuesta.DTOPeticiones.RespuestaDTOPeticion;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

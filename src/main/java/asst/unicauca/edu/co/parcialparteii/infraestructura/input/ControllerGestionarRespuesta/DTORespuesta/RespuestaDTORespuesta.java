@@ -1,7 +1,5 @@
 package asst.unicauca.edu.co.parcialparteii.infraestructura.input.ControllerGestionarRespuesta.DTORespuesta;
 
-
-import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Pregunta;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

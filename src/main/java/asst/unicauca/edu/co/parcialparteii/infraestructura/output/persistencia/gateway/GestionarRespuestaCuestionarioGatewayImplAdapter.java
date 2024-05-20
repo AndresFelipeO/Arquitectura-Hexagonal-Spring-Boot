@@ -16,7 +16,6 @@ import asst.unicauca.edu.co.parcialparteii.infraestructura.output.persistencia.r
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -51,7 +50,6 @@ public class GestionarRespuestaCuestionarioGatewayImplAdapter implements Gestion
     public Pregunta guardar(Pregunta pregunta, Cuestionario cuestionario, Docente docente) {
         Optional<PreguntaEntity> objPreguntaEntity = this.preguntaRepository.findById(pregunta.getIdpregunta());
         Optional<DocenteEntity> objDocenteEntity=this.docenteRepository.findById(docente.getIdPersona());
-        Optional<CuestionarioEntity> objCuestionarioEntity=this.cuestionarioRepository.findById(cuestionario.getIdCuestionario());
         List<RespuestaEntity> lista=objDocenteEntity.get().getRespuestaEntities();        
         for(Respuesta respuesta:pregunta.getRespuestaEntities()){
             RespuestaEntity respuestaEntity=this.respuestaModelMapper.map(respuesta,RespuestaEntity.class);
