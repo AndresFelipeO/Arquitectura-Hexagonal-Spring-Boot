@@ -15,23 +15,29 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Mapper {
     @Bean
-    public ModelMapper crearMapper(){
+    public ModelMapper crearMapper() {
         ModelMapper objMapper = new ModelMapper();
-        
-        //mappers de cuestionario
-        TypeMap<CuestionarioEntity, Cuestionario> typeMapCuestToEntyCuest= objMapper.createTypeMap(CuestionarioEntity.class, Cuestionario.class);
-        typeMapCuestToEntyCuest.addMappings(mapper -> mapper.skip(Cuestionario::setPreguntaEntities)).implicitMappings();
 
-        TypeMap<Cuestionario, CuestionarioDTORespuesta> typeMapCuestToCuestDTO = objMapper.createTypeMap(Cuestionario.class, CuestionarioDTORespuesta.class);
-        typeMapCuestToCuestDTO.addMappings(mapper -> mapper.skip(CuestionarioDTORespuesta::setPreguntaEntities)).implicitMappings();
+        // mappers de cuestionario
+        TypeMap<CuestionarioEntity, Cuestionario> typeMapCuestToEntyCuest = objMapper
+                .createTypeMap(CuestionarioEntity.class, Cuestionario.class);
+        typeMapCuestToEntyCuest.addMappings(mapper -> mapper.skip(Cuestionario::setPreguntaEntities))
+                .implicitMappings();
 
-        //mappers de Pregunta
-        TypeMap<PreguntaEntity, Pregunta>typeMapPreEntToPre=objMapper.createTypeMap(PreguntaEntity.class,Pregunta.class);
-        typeMapPreEntToPre.addMappings(mapper->mapper.skip(Pregunta::setObjTipoPreguntaEntity)).implicitMappings();
+        TypeMap<Cuestionario, CuestionarioDTORespuesta> typeMapCuestToCuestDTO = objMapper
+                .createTypeMap(Cuestionario.class, CuestionarioDTORespuesta.class);
+        typeMapCuestToCuestDTO.addMappings(mapper -> mapper.skip(CuestionarioDTORespuesta::setPreguntaEntities))
+                .implicitMappings();
 
-        TypeMap<Pregunta, PreguntaDTORespuesta> typeMapPreToPreDTO= objMapper.createTypeMap(Pregunta.class,PreguntaDTORespuesta.class);
-        typeMapPreToPreDTO.addMappings(mapper->mapper.skip(PreguntaDTORespuesta::setObjTipoPreguntaEntity)).implicitMappings();
+        // mappers de Pregunta
+        TypeMap<PreguntaEntity, Pregunta> typeMapPreEntToPre = objMapper.createTypeMap(PreguntaEntity.class,
+                Pregunta.class);
+        typeMapPreEntToPre.addMappings(mapper -> mapper.skip(Pregunta::setObjTipoPreguntaEntity)).implicitMappings();
 
+        TypeMap<Pregunta, PreguntaDTORespuesta> typeMapPreToPreDTO = objMapper.createTypeMap(Pregunta.class,
+                PreguntaDTORespuesta.class);
+        typeMapPreToPreDTO.addMappings(mapper -> mapper.skip(PreguntaDTORespuesta::setObjTipoPreguntaEntity))
+                .implicitMappings();
 
         return new ModelMapper();
     }

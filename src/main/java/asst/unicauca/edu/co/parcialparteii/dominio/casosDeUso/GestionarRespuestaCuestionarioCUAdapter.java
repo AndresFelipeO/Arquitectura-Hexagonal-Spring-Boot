@@ -31,6 +31,8 @@ public class GestionarRespuestaCuestionarioCUAdapter implements GestionarRespues
 
     @Override
     public Docente listar(int idDocente) {
+        if(!this.objGestionarRespuestaCuestionarioGateway.existeCuestionarioDocente(idDocente))
+            this.objRespuestaFormateadorResultados.retornarRespuestaErrorReglaDeNegocio("Error, el docente no ha respondido un cuestionario");
         return this.objGestionarRespuestaCuestionarioGateway.obtenerDocentesCuestionario(idDocente);
     }
 }

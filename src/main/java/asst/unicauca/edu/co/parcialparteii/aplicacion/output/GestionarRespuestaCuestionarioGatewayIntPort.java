@@ -9,4 +9,5 @@ public interface GestionarRespuestaCuestionarioGatewayIntPort {
     public Pregunta guardar(Pregunta pregunta, Cuestionario cuestionario, Docente docente);
     public boolean verificarDocenteCuestionario(Docente docente, Cuestionario cuestionario);
     public Docente obtenerDocentesCuestionario(int codigo);
+    public boolean existeCuestionarioDocente(int codigo);
 }

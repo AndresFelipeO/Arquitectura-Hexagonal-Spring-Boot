@@ -82,4 +82,12 @@ public class GestionarRespuestaCuestionarioGatewayImplAdapter implements Gestion
         Optional<DocenteEntity> docenteEntity=this.docenteRepository.findById(codigo);
         return this.respuestaModelMapper.map(docenteEntity.get(),Docente.class);
     }
+
+    @Override
+    public boolean existeCuestionarioDocente(int codigo) {
+        DocenteEntity objDocenteEntity=this.docenteRepository.findById(codigo).get();
+        if(objDocenteEntity.getRespuestaEntities().size()<=0)
+            return false;
+        return true;
+    }
 }
