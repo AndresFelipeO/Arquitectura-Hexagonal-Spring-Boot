@@ -57,7 +57,6 @@ public class GestionarCuestionarioGatewayImplAdapter implements GestionarCuestio
         objCuestionarioaEntity.setPreguntaEntities(lista);
         CuestionarioEntity objCuestionarioEntityRegistrado=this.cuestionarioRepository.save(objCuestionarioaEntity);
         return this.cuestionarioModelMapper.map(objCuestionarioEntityRegistrado, Cuestionario.class);
-        //return cuestionario;
     }
 
     @Override

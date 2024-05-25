@@ -24,6 +24,6 @@ public class TipoPreguntaEntity {
     @Column(name = "descripcion",length = 30)
     private String  descripcion;
 
-    @OneToMany(fetch = FetchType.EAGER,mappedBy = "objTipoPreguntaEntity")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "objTipoPreguntaEntity")
     private List<PreguntaEntity> preguntaEntity;
 }
