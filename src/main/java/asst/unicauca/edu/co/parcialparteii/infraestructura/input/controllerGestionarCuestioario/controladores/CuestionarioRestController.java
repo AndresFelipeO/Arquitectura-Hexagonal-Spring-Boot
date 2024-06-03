@@ -9,19 +9,24 @@ import asst.unicauca.edu.co.parcialparteii.infraestructura.input.controllerGesti
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
+@CrossOrigin(origins = { "http://localhost:4200" })
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
+@Validated
 public class CuestionarioRestController {
     private final GestionarCuestionarioCUIntPort objGestionarCuestionarioCUInt;
     private final CuestionarioMapperInfraestructuraDominio objMapper;
 
     @PostMapping("/cuestionario")
-    public ResponseEntity<CuestionarioDTORespuesta> crear(@RequestBody CuestionarioDTOPeticion objCuestionario) {
+    public ResponseEntity<CuestionarioDTORespuesta> crear(@Valid @RequestBody CuestionarioDTOPeticion objCuestionario) {
         Cuestionario objCuestionarioCrear=objMapper.mappearDePeticionACuestionario(objCuestionario);
         
         Cuestionario objCuestionarioCreado=objGestionarCuestionarioCUInt.crear(objCuestionarioCrear);
