@@ -4,13 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @AllArgsConstructor
-public class PreguntaDTORespuesta {
-    private int idpregunta;
-    private String enunciado;
-    private TipoPreguntaDTORespuesta objTipoPreguntaEntity;
-    private CuestionarioDTORespuesta objCuestionarioEntity; 
+public class CuestionarioDTORespuesta {
+    private int idCuestionario;
+    private String titulo;
+    private String descripcion;
+    public CuestionarioDTORespuesta(){};
 }

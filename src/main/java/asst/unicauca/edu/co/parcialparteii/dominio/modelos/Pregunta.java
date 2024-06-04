@@ -12,6 +12,6 @@ public class Pregunta {
     private int idpregunta;
     private String enunciado;
     private TipoPregunta objTipoPreguntaEntity;
-    private Cuestionario objCuestionario;
+    private Cuestionario objCuestionarioEntity;
     private List<Respuesta> respuestaEntities;
 }
