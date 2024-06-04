@@ -90,4 +90,16 @@ public class GestionarRespuestaCuestionarioGatewayImplAdapter implements Gestion
             return false;
         return true;
     }
+
+
+    @Override
+    public boolean verificarPreguntaCuestionario(Cuestionario cuestionario, Pregunta pregunta) {
+        Optional<CuestionarioEntity> cuestionarioEntity=this.cuestionarioRepository.findById(cuestionario.getIdCuestionario());
+        for(PreguntaEntity objPreguntaEntity:cuestionarioEntity.get().getPreguntaEntities()){
+            if(objPreguntaEntity.getIdpregunta()==pregunta.getIdpregunta()){
+                return true;
+            }
+        }
+        return false;
+    }
 }

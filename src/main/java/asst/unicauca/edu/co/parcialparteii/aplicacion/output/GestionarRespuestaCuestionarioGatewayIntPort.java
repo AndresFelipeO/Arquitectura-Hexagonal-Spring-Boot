@@ -6,6 +6,7 @@ import asst.unicauca.edu.co.parcialparteii.dominio.modelos.Pregunta;
 
 public interface GestionarRespuestaCuestionarioGatewayIntPort {
     public boolean existeRespuestaCuestionario(int codigo);
+    public boolean verificarPreguntaCuestionario(Cuestionario cuestionario, Pregunta pregunta);
     public Pregunta guardar(Pregunta pregunta, Cuestionario cuestionario, Docente docente);
     public boolean verificarDocenteCuestionario(Docente docente, Cuestionario cuestionario);
     public Docente obtenerDocentesCuestionario(int codigo);

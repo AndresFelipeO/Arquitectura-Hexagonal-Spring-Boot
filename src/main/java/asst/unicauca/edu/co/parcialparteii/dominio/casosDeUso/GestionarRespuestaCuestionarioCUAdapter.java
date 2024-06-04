@@ -23,6 +23,8 @@ public class GestionarRespuestaCuestionarioCUAdapter implements GestionarRespues
 
         if(this.objGestionarRespuestaCuestionarioGateway.verificarDocenteCuestionario(docente,cuestionario)){
             this.objRespuestaFormateadorResultados.retornarRespuestaErrorReglaDeNegocio("Error, El docente ya respondio el cuestionario");
+        }else if (!this.objGestionarRespuestaCuestionarioGateway.verificarPreguntaCuestionario(cuestionario, pregunta)) {
+            this.objRespuestaFormateadorResultados.retornarRespuestaErrorReglaDeNegocio("Error, la pregunta no pertenece al cuestionario");
         }
         preguntaCreada=this.objGestionarRespuestaCuestionarioGateway.guardar(pregunta,cuestionario,docente);
 
